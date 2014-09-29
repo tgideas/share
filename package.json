@@ -1,0 +1,38 @@
+{
+  "name": "TGIdeas-Presentations",
+  "version": "1.0.0",
+  "title":"TGIdeas - FE-Tech Presentations",
+  "keywords": "HTML, CSS, JS, JavaScript, Framework, Webppt, Slideshare, Presentations",
+  "description": "Web Front-end Technology Presentations ",
+  "repository": "git://github.com/tgideas/share.git",
+  "homepage": "http://tgideas.github.io/share",
+  "author": {
+    "name": "LV",
+    "site": "http://faso.me"
+  },
+  "license": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-concat-css": "*",
+    "grunt-css": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-copy": "*",
+    "load-grunt-config": "*",
+    "grunt-newer": "*",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-replace":"*",
+    "connect":"*",
+    "serve-static":"*"
+  },
+  "dependencies": {
+    "time-grunt": "*"
+  }
+}
