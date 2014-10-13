@@ -1,209 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-	<head>
-		<meta charset="utf-8"/>
-
-		<title>TGIdeas FE-Tech Sharing Session For Mobi Web</title>
-
-		<meta name="description" content="Front-end courses for Mobile web development"/>
-		<meta name="author" content="tgideas"/>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+        <title>TGIdeas移动前端技术峰会 - 2014年</title>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="description" content="2014年第一届TGIdeas移动前端技术峰会" />
+        <meta name="keywords" content="tgideas, html5, css3, 移动, 移动前端, motion, tgideas移动前端峰会" />
+        <meta name="author" content="TGIdeas" />
+        
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/slide.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/modernizr.custom.27971.js"></script>
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="css/nojs.css" />
+        </noscript>
+    </head>
+    <body>
+        
+        <div class="container demo-1">
+            
+            <div id="slider" class="sl-slider-wrapper">
 
-		<link rel="stylesheet" href="../../assets/revealjs/css/reveal.min.css"/>
-		<link rel="stylesheet" href="../../assets/revealjs/css/theme/night.css" id="theme"/>
-		<link rel="stylesheet" href="../../assets/css/mod/table.css"/>
+                <div class="sl-slider">
+                
+                    <div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                        <div class="sl-slide-inner">
+                            <div class="deco" data-icon="H"></div>
+                            <h2>《移动互动创意与功能支持》</h2>
+                            <blockquote><p>移动互联网时代，我们可以有哪些创意交互？日益成熟的HTML5和CSS3前端技术能给我们带来什么样的功能支持？</p><cite>NornorChen</cite></blockquote>
+                        </div>
+                    </div>
+                    
+                    <div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                        <div class="sl-slide-inner">
+                            <div class="deco" data-icon="q"></div>
+                            <h2>《数据驱动设计》</h2>
+                            <blockquote><p>移动互联网时代，懂得HTML5和CSS3很重要，懂得利用数据来衡量这些新技术带来的效果，并支撑我们更好滴利用这些技术改进设计与体验更为重要。</p><cite>七宝</cite></blockquote>
+                        </div>
+                    </div>
+                    
+                    <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="deco" data-icon="O"></div>
+                            <h2>《坑与排坑技巧》</h2>
+                            <blockquote><p>移动互联网时代，设备繁多，配置高低不一，结果是满地皆坑~你很快便会怀念IE6的那几个屈指可数的bug。</p><cite>Shineliang</cite></blockquote>
+                        </div>
+                    </div>
+                    
+                    <div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="deco" data-icon="I"></div>
+                            <h2>《性能优化》</h2>
+                            <blockquote><p>无论时PC时代，还是移动互联网时代，性能总是一个永恒的话题。</p><cite>花花</cite></blockquote>
+                        </div>
+                    </div>
+                    
+                    <div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="deco" data-icon="t"></div>
+                            <h2>《Motion.js - 为H5页面而生的行为框架》</h2>
+                            <blockquote><p>与JQM不同，Motion.js只关注行为的封装，把UI完全释放给用户。</p><cite>波波</cite></blockquote>
+                        </div>
+                    </div>
+                </div><!-- /sl-slider -->
+                
+                <nav id="nav-arrows" class="nav-arrows">
+                    <span class="nav-arrow-prev">Previous</span>
+                    <span class="nav-arrow-next">Next</span>
+                </nav>
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../../assets/revealjs/lib/css/zenburn.css"/>
+                <nav id="nav-dots" class="nav-dots">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = '../../assets/revealjs/css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+            </div><!-- /slider-wrapper -->
 
-		<!--[if lt IE 9]>
-		<script src="../../assets/revealjs/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        </div>
+        <script type="text/javascript" src="../../assets/jquery/1.11.1/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+        <script type="text/javascript" src="js/jquery.slitslider.js"></script>
+        <script type="text/javascript"> 
+            $(function() {
+            
+                var Page = (function() {
 
-	<body>
+                    var $navArrows = $( '#nav-arrows' ),
+                        $nav = $( '#nav-dots > span' ),
+                        slitslider = $( '#slider' ).slitslider( {
+                            onBeforeChange : function( slide, pos ) {
 
-		<div class="reveal">
+                                $nav.removeClass( 'nav-dot-current' );
+                                $nav.eq( pos ).addClass( 'nav-dot-current' );
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				
-				<section  data-background="#000" data-background-transition="slide">
-					<h3>TGIdeas移动前端技术分享会 - PPT大纲</h3>
-                    <h5>TGIdeas FE-Tech Sharing Session For Mobi</h5>
-					<p>
-                    <small>Created by <a href="http://tgideas.github.io" target="_blank">T4</a> at 29th Sept. 2014</small>
-					</p>
-				</section>
+                            }
+                        } ),
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-                    <section>
-                        <h2>Timeline</h2>
-                        <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+                        init = function() {
 
-	                        <!-- Table Header -->
-	                        <thead>
-		                        <tr>
-			                        <th>任务</th>
-			                        <th>日期</th>
-			                        <th>备注</th>
-		                        </tr>
-	                        </thead>
-	                        <!-- Table Header -->
+                            initEvents();
+                            
+                        },
+                        initEvents = function() {
 
-	                        <!-- Table Body -->
-	                        <tbody>
+                            // add navigation events
+                            $navArrows.children( ':last' ).on( 'click', function() {
 
-		                    <tr>
-			                    <td>1. PPT内容与提纲梳理</td>
-			                    <td>9月11日-12日</td>
-			                    <td>周五下午会议过</td>
-		                    </tr><!-- Table Row -->
-	
-		                    <tr class="even">
-			                    <td>2. PPT内容准备</td>
-			                    <td>9月22日-10月15日</td>
-			                    <td>如已准备好，可以提前周例会上演讲</td>
-		                    </tr><!-- Darker Table Row -->
-                            <tr>
-			                    <td>3. PPT内部预演、调整</td>
-			                    <td>10月16日-10月17日</td>
-			                    <td>17日内部过完后，将资料给大讲堂相关负责人</td>
-		                    </tr>
-                             <tr class="even">
-			                    <td>4. 大讲堂</td>
-			                    <td>10月24日</td>
-			                    <td></td>
-		                    </tr>
-                            </tbody>
-                        </table>
+                                slitslider.next();
+                                return false;
 
-                    </section>
-                    <section>
-                        <h3>1. 移动互动创意与功能支持</h3>
-                        <p>
-                            <img src="https://avatars3.githubusercontent.com/u/3692129?v=2&s=120" alt="nornor" />
-                        </p>
-                        <p>
-                            <small>
-                                <a href="http://github.com/nornor" target="_blank">Nornor</a>     
-                            </small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>2. 数据驱动设计</h3>
-                        <p>
-                            <img src="https://avatars2.githubusercontent.com/u/8232739?v=2&s=120" alt="liuqibao" />
-                        </p>
-                        <p>
-                            <small>
-                                <a href="http://github.com/liuqibao" target="_blank">七宝</a>     
-                            </small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>3. 移动组件框架</h3>
-                        <p>
-                            <img src="https://avatars0.githubusercontent.com/u/8232633?v=2&s=200" alt="bobo" />
-                        </p>
-                        <p>
-                            <small>
-                                <a href="http://github.com/brucewan" target="_blank">bobo</a>     
-                            </small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>4. 移动前端性能优化</h3>
-                        <p>
-                            <img src="https://avatars0.githubusercontent.com/u/8232633?v=2&s=200" alt="花花" />
-                        </p>
-                        <p>
-                            <small>
-                                <a href="http://github.com/josephzhou" target="_blank">花花</a>     
-                            </small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>5. 移动前端页面制作淫技</h3>
-                        <p>
-                            <img src="https://avatars2.githubusercontent.com/u/3890675?v=2&s=120" alt="Shine" />
-                        </p>
-                        <p>
-                            <small>
-                                <a href="http://github.com/lyushine" target="_blank">Shine</a>     
-                            </small>
-                        </p>
-                    </section>
-                    <section>
-                        <h3>6. websocket应用</h3>
-                        <p>
-                            <img src="https://avatars0.githubusercontent.com/u/8232633?v=2&s=120" alt="Aiden" />
-                        </p>
-                        <p>
-                            <small>
-                                <a href="http://github.com/aidenxiong" target="_blank">Aiden</a>     
-                            </small>
-                        </p>
-                    </section>
-				</section>
+                            } );
 
-			    <section>
-					<h1>THE END</h1>
-					<h3>BY LV / TGIdeas</h3>
-				</section>
+                            $navArrows.children( ':first' ).on( 'click', function() {
+                                
+                                slitslider.previous();
+                                return false;
 
-			</div>
+                            } );
 
-		</div>
+                            $nav.each( function( i ) {
+                            
+                                $( this ).on( 'click', function( event ) {
+                                    
+                                    var $dot = $( this );
+                                    
+                                    if( !slitslider.isActive() ) {
 
-		<script src="../../assets/revealjs/lib/js/head.min.js"></script>
-		<script src="../../assets/revealjs/js/reveal.min.js"></script>
+                                        $nav.removeClass( 'nav-dot-current' );
+                                        $dot.addClass( 'nav-dot-current' );
+                                    
+                                    }
+                                    
+                                    slitslider.jump( i + 1 );
+                                    return false;
+                                
+                                } );
+                                
+                            } );
 
-		<script>
-            var rvRoot = "../../assets/revealjs/";
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+                        };
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+                        return { init : init };
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+                })();
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: rvRoot+'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: rvRoot+'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: rvRoot+'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: rvRoot+'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: rvRoot+'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: rvRoot+'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+                Page.init();
 
-		</script>
+                /**
+                 * Notes: 
+                 * 
+                 * example how to add items:
+                 */
 
-	</body>
+                /*
+                
+                var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+                
+                // call the plugin's add method
+                ss.add($items);
+
+                */
+            
+            });
+        </script>
+    </body>
 </html>
