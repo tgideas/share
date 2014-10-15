@@ -29,7 +29,7 @@
     font-style: normal;
 }
 
-html { height: 100%; }
+html,body { display:block; height: 100%; }
 
 *,
 *:after,
