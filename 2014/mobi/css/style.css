@@ -74,6 +74,7 @@
     height: 5px;
     background: #ddd;
     background: rgba(150,150,150,0.4);
+    width:100%;/* we need this fix bugs on mobile browsers */
     cursor: pointer;
     box-shadow: 
         0 1px 1px rgba(255,255,255,0.4), 
