@@ -84,10 +84,12 @@
             </div><!-- /slider-wrapper -->
 
         </div>
-        <script type="text/javascript" src="../../assets/jquery/1.11.1/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
-        <script type="text/javascript" src="js/jquery.slitslider.js"></script>
-        <script type="text/javascript"> 
+        <script src="../../assets/jquery/1.11.1/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="../../assets/hammerjs/2.0.4/hammer.min.js"></script>
+        <script src="../../assets/hammerjs/2.0.4/jquery.hammer.js"></script>
+        <script> 
             $(function() {
             
                 var Page = (function() {
@@ -106,7 +108,7 @@
                         init = function() {
 
                             initEvents();
-                            
+                            initGesture();
                         },
                         initEvents = function() {
 
@@ -145,6 +147,13 @@
                                 
                             } );
 
+                        },
+                        initGesture = function(){
+                            slitslider.$el.on('swipeleft',function(e){
+                                slitslider.previous();
+                            }).on('swiperight',function(e){
+                                slitslider.next();
+                            });    
                         };
 
                         return { init : init };
