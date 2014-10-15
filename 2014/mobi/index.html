@@ -149,10 +149,12 @@
 
                         },
                         initGesture = function(){
-                            slitslider.$el.on('swipeleft',function(e){
-                                slitslider.previous();
-                            }).on('swiperight',function(e){
+                            slitslider.$el.hammer({
+                                
+                            }).bind('swipeleft',function(e){
                                 slitslider.next();
+                            }).on('swiperight',function(e){
+                                slitslider.previous();
                             });    
                         };
 
