@@ -161,6 +161,7 @@
     height:33.333333%;
     padding:5px;
     position:relative;
+    overflow:hidden;
 }
 .album-grid:nth-child(1){
     background:#fff;
@@ -197,32 +198,28 @@
 .album-tit-bd{
     color:#fff;
     font-size:1.0em;
-    font-weight:700;
+    font-weight:400;
     text-align:right;
     width:100%;
     position:absolute;
     bottom:0;
     right:0;
-    padding:0.1em;
+    padding:0.1em 0.2em;
+    -webkit-transform:translateX(100%);
+    transform:translateX(100%);
+    opacity:0;
+    -webkit-transition:all .25s;
+    transition:all .25s;
+    text-transform:uppercase;
+    border-bottom:1px solid #fff;
 }
 .bg-light .album-tit-bd{
     color:#333;
+    border-color:#000;
 }
-.album-desc{
-    position:absolute;
-    top:0;
-    opacity:0;
-    left:-100%;
-    border-right:2px solid #fff;
-    text-align:left;
-    font-size:0.9em;
-    font-weight:400;
-    background:rgba(0,0,0,.7);
-    padding:0.1em;
-    -webkit-transition:opacity .35s,left .35s;
-    transition:opacity .35s,left .35s;
-    color:#fff;
-    text-transform:uppercase;
+.album-author{
+    font-size:smaller;    
+    display:block;
 }
 .album-img{
     vertical-align:top;
@@ -238,14 +235,15 @@
     border-radius:50%;
     -webkit-border-radius:50%;
 }
-.album-grid:hover .album-desc,.album-grid:active .album-desc{
-    opacity:1;
-    left:0;
-}
-.album-grid:hover .album-img,.album-grid:active .album-img{
+.album-grid:hover .album-img,.album-grid:active .album-img {
     opacity: 1;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+.album-grid:hover .album-tit-bd,.album-grid:active .album-tit-bd {
+    opacity:1;
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
 }
 .demo-1 .deco {
     width: 260px;
@@ -300,7 +298,7 @@
     padding: 20px;
     position: absolute;
     font-size: 34px;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 12px;
     text-transform: uppercase;
     width: 80%;
@@ -648,10 +646,10 @@
         height:50%;
     }
     .album-tit-bd{
-        font-size:1.4em;
+        font-size:1.2em;
     }
     .album-desc{
-        font-size:1.2em;
+        font-size:1.0em;
     }
 }
 @media screen and (min-width:1601px){
@@ -660,11 +658,11 @@
         height:100%;
     }
     .album-tit-bd{
-        font-size:1.6em;
-        padding:0.2em;
+        font-size:1.4em;
+        padding:0.2em 0.3em;
     }
     .album-desc{
-        font-size:1.4em;
+        font-size:1.2em;
     }
 }
 @media screen and (max-width: 660px) {

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
-        <title>TGIdeas移动前端技术峰会 - 2014年</title>
+        <title>FC4M - TGIdeas移动前端技术峰会 - 2014年</title>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -29,7 +29,7 @@
                     
                     <div class="sl-slide bg-0" data-orientation="horizontal" data-slice1-rotation="-45" data-slice2-rotation="-10" data-slice1-scale="1.5" data-slice2-scale="1">
                         <div class="sl-slide-inner">
-                            <div class="deco" data-icon="">TGIDEAS MFTC</div>
+                            <div class="deco" data-icon="">TGIDEAS FC4M</div>
                             <h2>移动前端技术峰会</h2>
                             <blockquote><div class="quote-inner">2014年10月28日，腾讯大讲堂邀请您参与TGIdeas第一届移动前端技术峰会！</div><cite><a href="http://tgideas.qq.com" target="_blank">TGIdeas.qq.com</a></cite></blockquote>
                         </div>
@@ -42,39 +42,38 @@
                                 <div class="album-bd c-flex">
                                     <div class="album-grid c-flex bg-light">
                                         <div class="album-tit c-flex">
-                                            <h3 class="album-tit-bd">移动创意与功能支持</h3>
+                                            <h3 class="album-tit-bd"><span class="album-author">Nornor</span>移动创意与功能支持</h3>
                                         </div>
-                                        <div class="album-desc">Nornor Chen</div>
                                         <div class="album-item">
                                             <img class="album-img" src="img/nornorchen.jpg" alt="nornor"/>                  
                                         </div>
                                     </div>
                                     <div class="album-grid c-flex">
-                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">数据驱动设计</h3></div>
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd"><span class="album-author">七宝</span>数据驱动设计</h3></div>
                                         <div class="album-item">
                                             <img class="album-img" src="img/mckeyliu.jpg" alt="mckey"/>                  
                                         </div>
                                     </div>
                                     <div class="album-grid c-flex">
-                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">移动页面性能优化</h3></div>
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd"><span class="album-author">花花</span>移动页面性能优化</h3></div>
                                         <div class="album-item">
                                             <img class="album-img" src="img/josephzhou.jpg" alt="jose"/>                  
                                         </div>
                                     </div>
                                     <div class="album-grid c-flex">
-                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">移动页面坑与排坑技巧</h3></div>
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd"><span class="album-author">宇轩</span>移动页面坑与排坑技巧</h3></div>
                                         <div class="album-item">
                                             <img class="album-img" src="img/shineliang.jpg" alt="shine"/>              
                                         </div>
                                     </div>  
                                     <div class="album-grid c-flex bg-light">
-                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">Motion移动组件库</h3></div>
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd"><span class="album-author">波波</span>Motion移动组件库</h3></div>
                                         <div class="album-item">
                                             <img class="album-img" src="img/brucewan.jpg" alt="bruce"/>                   
                                         </div>
                                     </div>
                                     <div class="album-grid c-flex">
-                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">Websocket互动小游戏</h3></div>
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd"><span class="album-author">Aiden</span>Websocket互动小游戏</h3></div>
                                         <div class="album-item">
                                             <img class="album-img" src="img/aidenxiong.jpg" alt="aiden"/>                  
                                         </div>
@@ -147,7 +146,6 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <span></span>
                 </nav>
 
             </div><!-- /slider-wrapper -->
@@ -158,7 +156,8 @@
         <script src="js/jquery.slitslider.js"></script>
         <script src="../../assets/hammerjs/2.0.4/hammer.min.js"></script>
         <script src="../../assets/hammerjs/2.0.4/jquery.hammer.js"></script>
-        <script> 
+        <script>
+            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
             $(function() {
             
                 var Page = (function() {
@@ -225,6 +224,15 @@
                             }).on('pandown',function(e){
                                 slitslider.previous();
                             });    
+                        },
+                        initAlbum = function(){
+                            var idxCache = {};
+                            $('#album').find('.album-grid').each(function(i,o){
+                                idxCache[(o.id = 'albumGrid'+i)]=i+1;
+                                $(o).on('tap',function(ev){
+                                    slitslider.jump(idxCache[this.id]);
+                                });
+                            });
                         };
 
                         return { init : init };
