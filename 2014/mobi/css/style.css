@@ -101,7 +101,20 @@
     line-height: 260px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 0px 0px 2px #666;
+}
+
+.demo-1 .deco img{
+    position:absolute;
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    margin:-105px 0 0 -105px;
 }
 
 .demo-1 [data-icon]:after {
@@ -129,7 +142,7 @@
     position: absolute;
     font-size: 34px;
     font-weight: 700;
-    letter-spacing: 13px;
+    letter-spacing: 12px;
     text-transform: uppercase;
     width: 80%;
     left: 10%;
@@ -157,7 +170,7 @@
 
 .demo-1 .sl-slide blockquote p,.demo-1 .sl-slide blockquote .quote-inner{
     margin: 0 auto;
-    width: 60%;
+    width: 65%;
     max-width: 400px;
     position: relative;
     text-align:left;
@@ -177,6 +190,11 @@
     top: 35px;
     content: '\201C';
 }
+
+.bg-light blockquote p:before,.bg-light blockquote p:after{
+    color:rgba(244,244,244,0.8) !important;
+}
+
 .demo-1 .sl-slide blockquote p:after{
     left:auto;
     right:-85px;
@@ -291,6 +309,31 @@
 }
 
 .demo-1 .bg-5 blockquote:before {
+    color: #ecd82c;
+}
+
+/* sixth Slide */
+.demo-1 .bg-6 .sl-slide-inner,
+.demo-1 .bg-6 .sl-content-slice {
+    background: #7aad20;
+}
+
+.demo-1 .bg-6 .deco {
+    border-color: rgba(220,220,220,0.4);
+}
+
+.demo-1 .bg-6 .deco:after {
+    color: #000;
+    text-shadow: 0 0 1px #000;
+}
+
+.demo-1 .bg-6 h2,
+.demo-1 .bg-6 blockquote{
+    color: #000;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.demo-1 .bg-6 blockquote:before {
     color: #ecd82c;
 }
 /* Animations for content elements */
@@ -443,19 +486,26 @@
 
 @media screen and (max-width: 660px) {
     .demo-1 .deco {
-        width: 130px;
-        height: 130px;
-        line-height:130px;
-        margin-left: -65px;
+        width: 150px;
+        height: 150px;
+        line-height:150px;
+        margin-left: -75px;
         margin-bottom: 50px;
+        font-size:14px;
+    }
+
+    .demo-1 .deco img{
+        width:110px;
+        height:110px;
+        margin:-55px 0 0 -55px;
     }
 
     .demo-1 [data-icon]:after {
-        width: 110px;
-        height: 110px;
-        line-height: 110px;
-        font-size: 40px;
-        margin: -55px 0 0 -55px;
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+        font-size: 45px;
+        margin: -65px 0 0 -65px;
     }
 
     .demo-1 .sl-slide blockquote {
