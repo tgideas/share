@@ -177,6 +177,7 @@
 
                             initEvents();
                             initGesture();
+                            initAlbum();
                         },
                         initEvents = function() {
 
@@ -228,8 +229,8 @@
                         initAlbum = function(){
                             var idxCache = {};
                             $('#album').find('.album-grid').each(function(i,o){
-                                idxCache[(o.id = 'albumGrid'+i)]=i+1;
-                                $(o).on('tap',function(ev){
+                                idxCache[(o.id = 'albumGrid'+i)]=i+3;
+                                $(o).on('click',function(ev){
                                     slitslider.jump(idxCache[this.id]);
                                 });
                             });
