@@ -54,7 +54,7 @@
     text-align: center;
     position: absolute;
     bottom: 0;
-    height: 5px;
+    height: 2px;
     width: 100%;
     left: 0;
     z-index: 1000;
@@ -71,7 +71,7 @@
     -moz-box-flex:1;
     -ms-box-flex:1;
     position: relative;
-    height: 5px;
+    height: 2px;
     background: #ddd;
     background: rgba(150,150,150,0.4);
     width:100%;/* we need this fix bugs on mobile browsers */
