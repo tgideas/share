@@ -87,7 +87,166 @@
 }
 
 /* Content elements */
+.c-flex{
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* Then we define the flow direction and if we allow the items to wrap 
+    * Remember this is the same as:
+    * flex-direction: row;
+    * flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+    -webkit-flex-flow:row wrap;
+  
+    /* Then we define how is distributed the remaining space */
+    justify-content: center;
+    -webkit-justify-content:center;
 
+    align-items:center;
+    -webkit-align-items:center;
+}
+.album{
+    position:absolute;
+    z-index:11;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:#000;
+   
+}
+.album-hd{
+    font-size:26px;
+    font-weight:normal;
+    text-align:center;
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    text-transform:uppercase;
+}
+.album-bd{
+    position:absolute;
+    z-index:11;
+    top:0px;
+    left:0;
+    bottom:0;
+    width:100%;
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* Then we define the flow direction and if we allow the items to wrap 
+    * Remember this is the same as:
+    * flex-direction: row;
+    * flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+    -webkit-flex-flow:row wrap;
+  
+    /* Then we define how is distributed the remaining space */
+    justify-content: center;
+    -webkit-justify-content:center;
+
+    align-items:center;
+    -webkit-align-items:center;
+    
+    background:#eee;    
+}
+.album-grid{
+    width:50%;
+    height:33.333333%;
+    padding:5px;
+    position:relative;
+}
+.album-grid:nth-child(1){
+    background:#fff;
+}
+.album-grid:nth-child(2){
+    background:#000;
+}
+.album-grid:nth-child(3){
+    background:#db84ad;
+}
+.album-grid:nth-child(4){
+    background:#5bc2ce;
+}
+.album-grid:nth-child(5){
+    background:#ffeb41;
+}
+.album-grid:nth-child(6){
+    background:#7aad20;
+}
+.album-item{
+    width:80%;
+    height:auto;  
+    text-align:center;
+    position:relative;
+}
+.album-tit{
+    position:absolute;
+    top:0;
+    z-index:2;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.album-tit-bd{
+    color:#fff;
+    font-size:1.0em;
+    font-weight:700;
+    text-align:right;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0.1em;
+}
+.bg-light .album-tit-bd{
+    color:#333;
+}
+.album-desc{
+    position:absolute;
+    top:0;
+    opacity:0;
+    left:-100%;
+    border-right:2px solid #fff;
+    text-align:left;
+    font-size:0.9em;
+    font-weight:400;
+    background:rgba(0,0,0,.7);
+    padding:0.1em;
+    -webkit-transition:opacity .35s,left .35s;
+    transition:opacity .35s,left .35s;
+    color:#fff;
+    text-transform:uppercase;
+}
+.album-img{
+    vertical-align:top;
+    display:block;
+    width:100%;
+    opacity: 0.5;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.album-grid:hover .album-desc,.album-grid:active .album-desc{
+    opacity:1;
+    left:0;
+}
+.album-grid:hover .album-img,.album-grid:active .album-img{
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
 .demo-1 .deco {
     width: 260px;
     height: 260px;
@@ -483,7 +642,31 @@
 
 
 /* Media Queries for custom slider */
-
+@media screen and (min-width:481px){
+    .album-grid{
+        width:33.33333333%;
+        height:50%;
+    }
+    .album-tit-bd{
+        font-size:1.4em;
+    }
+    .album-desc{
+        font-size:1.2em;
+    }
+}
+@media screen and (min-width:1601px){
+    .album-grid{
+        width:16.6666666%;
+        height:100%;
+    }
+    .album-tit-bd{
+        font-size:1.6em;
+        padding:0.2em;
+    }
+    .album-desc{
+        font-size:1.4em;
+    }
+}
 @media screen and (max-width: 660px) {
     .demo-1 .deco {
         width: 150px;

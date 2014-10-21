@@ -27,11 +27,60 @@
 
                 <div class="sl-slider">
                     
-                    <div class="sl-slide bg-0" data-orientation="vertical" data-slice1-rotation="15" data-slice2-rotation="8" data-slice1-scale="1.5" data-slice2-scale="1">
+                    <div class="sl-slide bg-0" data-orientation="horizontal" data-slice1-rotation="-45" data-slice2-rotation="-10" data-slice1-scale="1.5" data-slice2-scale="1">
                         <div class="sl-slide-inner">
                             <div class="deco" data-icon="">TGIDEAS MFTC</div>
                             <h2>移动前端技术峰会</h2>
                             <blockquote><div class="quote-inner">2014年10月28日，腾讯大讲堂邀请您参与TGIdeas第一届移动前端技术峰会！</div><cite><a href="http://tgideas.qq.com" target="_blank">TGIdeas.qq.com</a></cite></blockquote>
+                        </div>
+                    </div>
+
+                    <div class="sl-slide bg-0" data-orientation="vertical" data-slice1-rotation="15" data-slice2-rotation="8" data-slice1-scale="1.5" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div id="album" class="album ani-fade">
+                                <h1 class="album-hd">小鲜肉</h1>
+                                <div class="album-bd c-flex">
+                                    <div class="album-grid c-flex bg-light">
+                                        <div class="album-tit c-flex">
+                                            <h3 class="album-tit-bd">移动创意与功能支持</h3>
+                                        </div>
+                                        <div class="album-desc">Nornor Chen</div>
+                                        <div class="album-item">
+                                            <img class="album-img" src="img/nornorchen.jpg" alt="nornor"/>                  
+                                        </div>
+                                    </div>
+                                    <div class="album-grid c-flex">
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">数据驱动设计</h3></div>
+                                        <div class="album-item">
+                                            <img class="album-img" src="img/mckeyliu.jpg" alt="mckey"/>                  
+                                        </div>
+                                    </div>
+                                    <div class="album-grid c-flex">
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">移动页面性能优化</h3></div>
+                                        <div class="album-item">
+                                            <img class="album-img" src="img/josephzhou.jpg" alt="jose"/>                  
+                                        </div>
+                                    </div>
+                                    <div class="album-grid c-flex">
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">移动页面坑与排坑技巧</h3></div>
+                                        <div class="album-item">
+                                            <img class="album-img" src="img/shineliang.jpg" alt="shine"/>              
+                                        </div>
+                                    </div>  
+                                    <div class="album-grid c-flex bg-light">
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">Motion移动组件库</h3></div>
+                                        <div class="album-item">
+                                            <img class="album-img" src="img/brucewan.jpg" alt="bruce"/>                   
+                                        </div>
+                                    </div>
+                                    <div class="album-grid c-flex">
+                                        <div class="album-tit c-flex"><h3 class="album-tit-bd">Websocket互动小游戏</h3></div>
+                                        <div class="album-item">
+                                            <img class="album-img" src="img/aidenxiong.jpg" alt="aiden"/>                  
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div> 
                         </div>
                     </div>
 
@@ -97,12 +146,14 @@
                     <span></span>
                     <span></span>
                     <span></span>
+                    <span></span>
+                    <span></span>
                 </nav>
 
             </div><!-- /slider-wrapper -->
 
         </div>
-        <script src="../../assets/jquery/1.11.1/jquery-1.11.1.min.js"></script>
+        <script src="../../assets/jquery/2.1.1/jquery-2.1.1.min.js"></script>
         <script src="js/jquery.ba-cond.min.js"></script>
         <script src="js/jquery.slitslider.js"></script>
         <script src="../../assets/hammerjs/2.0.4/hammer.min.js"></script>
@@ -169,9 +220,9 @@
                         initGesture = function(){
                             slitslider.$el.hammer({
                                 
-                            }).bind('swipeleft',function(e){
+                            }).on('panup',function(e){
                                 slitslider.next();
-                            }).on('swiperight',function(e){
+                            }).on('pandown',function(e){
                                 slitslider.previous();
                             });    
                         };
