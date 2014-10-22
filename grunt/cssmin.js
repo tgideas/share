@@ -3,8 +3,8 @@ module.exports = {
     // the banner is inserted at the top of the output
     banner: '<%= banner%>'
   },
-  dist:{
-    src:'<%= concat_css.dist.dest %>',
-    dest:'dist/css/docs.css'
+  dist_2014_mobi:{
+    src:'<%= concat_css.dist_2014_mobi.dest %>',
+    dest:'2014/mobi/dist/css/all.min.css'
   }
 };

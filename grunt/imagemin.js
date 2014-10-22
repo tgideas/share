@@ -4,13 +4,13 @@ module.exports = {
         cache: false
     },
 
-    dist: {
-        files: [/*{
+    dist_2014_mobi: {
+        files: [{
             
             expand: true,                // Enable dynamic expansion
-            cwd: 'images/',              // src matches are relative to this path
+            cwd: '2014/mobi/img/',              // src matches are relative to this path
             src: ["*.{png,jpg,gif}"], // Actual patterns to match
-            dest: 'dist/images/'            // Destination path prefix
-        }*/]
+            dest: '2014/mobi/dist/img/'            // Destination path prefix
+        }]
     }
 };

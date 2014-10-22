@@ -1,10 +1,9 @@
 module.exports = {
     main: {
+        
         files:[
-            {expand:true,cwd:'../../js/reveal.js/',src:['css/**'],dest:'assets/revealjs/'},
-            {expand:true,cwd:'../../js/reveal.js/',src:['js/**'],dest:'assets/revealjs/'},
-            {expand:true,cwd:'../../js/reveal.js/',src:['lib/**'],dest:'assets/revealjs/'},
-            {expand:true,cwd:'../../js/reveal.js/',src:['plugin/**'],dest:'assets/revealjs/'}
+            {expand:true,cwd:'2014/mobi/',src:['fonts/**'],dest:'2014/mobi/dist/'}        
         ]
+    
     }
 };

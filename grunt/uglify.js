@@ -4,14 +4,9 @@ module.exports = {
         banner: '<%= banner%>'
     },
     //for test only
-    dist: {
+    dist_2014_mobi: {
         files: {
-            'dist/js/xhogan.min.js': ['dist/js/xhogan.js']
-        }
-    },
-    codemirror: {
-        files: {
-            'dist/js/codemirror.min.js': ['dist/js/codemirror.js']
+            '2014/mobi/dist/js/all.min.js': ['2014/mobi/dist/js/all.js']
         }
     }
 };

@@ -1,21 +1,13 @@
 module.exports = {
-    //for test
-    dist: {
+    //for 2014/mobi
+    dist_2014_mobi: {
         src: [
-            'js/hogan-2.0.0.js',
-            'js/base64.js',
-            'js/xhogan.js'
+            '2014/mobi/js/jquery.ba-cond.min.js',
+            '2014/mobi/js/jquery.slitslider.js',
+            'assets/hammerjs/2.0.4/hammer.min.js',
+            'assets/hammerjs/2.0.4/jquery.hammer.js',
+            '2014/mobi/js/app.js'
         ],
-        dest: 'dist/js/xhogan.js'
-    },
-    codemirror:{
-        src:[
-            'dist/codemirror/lib/codemirror.js',
-            'dist/codemirror/mode/xml/xml.js',
-            'dist/codemirror/mode/javascript/javascript.js',
-            'dist/codemirror/mode/css/css.js',
-            'dist/codemirror/mode/htmlmixed/htmlmixed.js'
-        ],
-        dest:'dist/js/codemirror.js'
+        dest: '2014/mobi/dist/js/all.js'
     }
 };

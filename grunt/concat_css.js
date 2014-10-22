@@ -1,8 +1,10 @@
 module.exports = {
-    dist: {
+    dist_2014_mobi: {
         src: [
-            'css/docs.css'
+            '2014/mobi/css/base.css',
+            '2014/mobi/css/slide.css',
+            '2014/mobi/css/style.css'
         ],
-        dest: 'dist/css/docs.debug.css'
+        dest: '2014/mobi/dist/css/all.css'
     }
 };
