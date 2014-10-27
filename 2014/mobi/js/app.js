@@ -1,5 +1,4 @@
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-$('#album').css('border','2px solid red');
 $(function() {
 
     var Page = (function() {
@@ -114,6 +113,7 @@ $(function() {
                 $('#album').find('.album-grid').each(function(i,o){
                     idxCache[(o.id = 'albumGrid'+i)]=i+3;
                     $(o).on('click',function(ev){
+                        alert(this.id);
                         slitslider.jump(idxCache[this.id]);
                     });
                 });
