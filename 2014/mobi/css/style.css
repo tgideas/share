@@ -92,7 +92,6 @@
 .c-flex{
     display: -webkit-box; 
     display: -moz-box;
-    display: box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -103,6 +102,11 @@
     */
     flex-flow: row wrap;
     -webkit-flex-flow:row wrap;
+
+    -webkit-box-orient:horizontal;
+    -webkit-box-lines:multiple;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
   
     /* Then we define how is distributed the remaining space */
     justify-content: center;
@@ -149,7 +153,12 @@
     */
     flex-flow: column nowrap;
     -webkit-flex-flow:column nowrap;
-  
+    
+    -webkit-box-orient:horizontal;
+    -webkit-box-lines:multiple;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+
     /* Then we define how is distributed the remaining space */
     justify-content: center;
     -webkit-justify-content:center;

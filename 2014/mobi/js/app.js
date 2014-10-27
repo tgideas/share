@@ -1,5 +1,4 @@
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-alert($('html')[0].className);
 $('#album').css('border','2px solid red');
 $(function() {
 
