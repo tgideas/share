@@ -115,6 +115,9 @@ $(function() {
                     $(o).on('click',function(ev){
                         alert(this.id);
                         slitslider.jump(idxCache[this.id]);
+                    }).on('touchstart',function(){
+                        alert(this.id);
+                        return false;
                     });
                 });
             },
