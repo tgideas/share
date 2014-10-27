@@ -154,7 +154,7 @@
     flex-flow: column nowrap;
     -webkit-flex-flow:column nowrap;
     
-    -webkit-box-orient:horizontal;
+    -webkit-box-orient:vertical;
     -webkit-box-lines:multiple;
     -webkit-box-align:center;
     -webkit-box-pack:center;
