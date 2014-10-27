@@ -144,32 +144,6 @@
     left:0;
     bottom:0;
     width:100%;
-    display: -webkit-box; 
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    /* Then we define the flow direction and if we allow the items to wrap 
-    * Remember this is the same as:
-    * flex-direction: row;
-    * flex-wrap: wrap;
-    */
-    flex-flow: column nowrap;
-    -webkit-flex-flow:column nowrap;
-    
-    /* Then we define how is distributed the remaining space */
-    justify-content: center;
-    -webkit-justify-content:center;
-
-    align-items:center;
-    -webkit-align-items:center;
-    
-    /* fix bugs on MiuiBrowser 1.0 || AppleWebkit 534.30 */
-    -webkit-box-orient:vertical; /* rel to flex-direction  */
-    -webkit-box-lines:multiple;  /* rel to flex-wrap */
-    -webkit-box-align:center;    /* rel to align-items */
-    -webkit-box-pack:center;     /* rel to justity-content  */
-    
     background:#eee;    
 }
 .album-grid{
@@ -178,7 +152,6 @@
     padding:5px;
     position:relative;
     overflow:hidden;
-    -webkit-transform:translateZ(0);
 }
 .album-grid-bd:before,
 .album-grid-bd:after {
