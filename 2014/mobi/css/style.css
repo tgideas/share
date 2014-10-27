@@ -63,6 +63,7 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-box-orient:horizontal;/* fix bugs on MiuiBrowser 1.0 || AppleWebkit 534.30 */
 }
 
 .nav-dots span {
@@ -72,7 +73,6 @@
     -ms-box-flex:1;
     box-flex:1;
     
-    -webkit-box-orient:horizontal;/* fix bugs on MiuiBrowser 1.0 || AppleWebkit 534.30 */
     
     position: relative;
     height: 2px;
@@ -127,7 +127,6 @@
     height:100%;
     width:100%;
     background:#000;
-    -webkit-transform:translateZ(0);   
 }
 .album-hd{
     font-size:26px;
@@ -179,6 +178,7 @@
     padding:5px;
     position:relative;
     overflow:hidden;
+    -webkit-transform:translateZ(0);
 }
 .album-grid-bd:before,
 .album-grid-bd:after {

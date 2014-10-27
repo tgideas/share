@@ -1,4 +1,4 @@
-//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 $(function() {
 
     var Page = (function() {
@@ -115,9 +115,6 @@ $(function() {
                     $(o).on('click',function(ev){
                         alert(this.id);
                         slitslider.jump(idxCache[this.id]);
-                    }).on('touchstart',function(){
-                        alert(this.id);
-                        return false;
                     });
                 });
             },
