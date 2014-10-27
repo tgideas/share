@@ -163,13 +163,13 @@
     position:relative;
     overflow:hidden;
 }
-.album-grid:before,
-.album-grid:after {
+.album-grid-bd:before,
+.album-grid-bd:after {
     content: "\20";
     display: table;
 }
 
-.album-grid:after {
+.album-grid-bd:after {
     clear: both;
 }
 .album-grid:nth-child(odd){
@@ -662,6 +662,7 @@
         margin-right:15px;
     }
     .album-tit{
+        float:right;
         position:relative;
         right:auto;
         bottom:auto;
