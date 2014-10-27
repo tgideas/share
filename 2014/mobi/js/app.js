@@ -1,5 +1,5 @@
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-alert(navigator.userAgent);
+alert($('#album').height());
 $(function() {
 
     var Page = (function() {
