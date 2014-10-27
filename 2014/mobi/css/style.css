@@ -144,8 +144,8 @@
     * flex-direction: row;
     * flex-wrap: wrap;
     */
-    flex-flow: row wrap;
-    -webkit-flex-flow:row wrap;
+    flex-flow: column nowrap;
+    -webkit-flex-flow:column nowrap;
   
     /* Then we define how is distributed the remaining space */
     justify-content: center;
@@ -157,11 +157,20 @@
     background:#eee;    
 }
 .album-grid{
-    width:50%;
-    height:33.333333%;
+    height:16.6666666666%;
+    width:100%;
     padding:5px;
     position:relative;
     overflow:hidden;
+}
+.album-grid:before,
+.album-grid:after {
+    content: "\20";
+    display: table;
+}
+
+.album-grid:after {
+    clear: both;
 }
 .album-grid:nth-child(1){
     background:#fff;
@@ -181,37 +190,35 @@
 .album-grid:nth-child(6){
     background:#7aad20;
 }
-.album-item{
-    width:80%;
-    height:auto;  
+.album-grid-bd{
+    position:relative;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+}
+.album-item{  
     text-align:center;
     position:relative;
+    height:100%;
+    max-height:100%;
 }
 .album-tit{
     position:absolute;
-    top:0;
-    z-index:2;
-    left:0;
-    width:100%;
-    height:100%;
+    right:10px;
+    bottom:10px;
 }
 .album-tit-bd{
     color:#fff;
-    font-size:1.0em;
+    font-size:1.2em;
     font-weight:400;
     text-align:right;
-    width:100%;
-    position:absolute;
-    bottom:0;
-    right:0;
     padding:0.1em 0.2em;
-    -webkit-transform:translateX(100%);
-    transform:translateX(100%);
-    opacity:0;
-    -webkit-transition:all .25s;
-    transition:all .25s;
     text-transform:uppercase;
-    border-bottom:1px solid #fff;
+}
+.album-tit-bd em{
+    font-style:normal;
+    font-weight:700;
+    color:red;
 }
 .bg-light .album-tit-bd{
     color:#333;
@@ -224,7 +231,8 @@
 .album-img{
     vertical-align:top;
     display:block;
-    width:100%;
+    width:auto;
+    height:100%;
     opacity: 0.5;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
@@ -237,13 +245,8 @@
 }
 .album-grid:hover .album-img,.album-grid:active .album-img {
     opacity: 1;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-.album-grid:hover .album-tit-bd,.album-grid:active .album-tit-bd {
-    opacity:1;
-    -webkit-transform:translateX(0);
-    transform:translateX(0);
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 .demo-1 .deco {
     width: 260px;
@@ -315,7 +318,7 @@
     text-align: center;
     left: 0;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     height: 70px;
     color: #8b8b8b;
@@ -509,7 +512,7 @@
     -ms-animation: moveUp 1s ease-in-out both;
     animation: moveUp 1s ease-in-out both;
 }
-.sl-trans-elems blockquote{
+.sl-trans-elems blockquote,.sl-trans-elems .ani-fade{
     -webkit-animation: fadeIn 0.5s linear 0.5s both;
     -moz-animation: fadeIn 0.5s linear 0.5s both;
     -o-animation: fadeIn 0.5s linear 0.5s both;
@@ -530,7 +533,7 @@
     -ms-animation: fadeOut 1s ease-in-out both;
     animation: fadeOut 1s ease-in-out both;
 }
-.sl-trans-back-elems blockquote{
+.sl-trans-back-elems .ani-fade,.sl-trans-back-elems blockquote{
     -webkit-animation: fadeOut 1s linear both;
     -moz-animation: fadeOut 1s linear both;
     -o-animation: fadeOut 1s linear both;
@@ -641,31 +644,53 @@
 
 /* Media Queries for custom slider */
 @media screen and (min-width:481px){
-    .album-grid{
-        width:33.33333333%;
-        height:50%;
-    }
     .album-tit-bd{
-        font-size:1.2em;
+        font-size:1.3em;
     }
     .album-desc{
         font-size:1.0em;
+    }    
+}
+@media screen and (min-width:660px){
+    .album-item,.album-tit{
+        float:left;
+        display:inline;
+    }
+    .album-item {
+        margin-right:15px;
+    }
+    .album-tit{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        width:330px;
+        height:100%;
+    }
+    .album-img{
+        max-width:160px !important;
+    }
+    .album-grid-bd{
+        width:550px;
+    }
+}
+@media screen and (min-width:950px){
+    .album-tit-bd{
+        font-size:1.6em;
+        padding:0.2em 0.3em;
     }
 }
 @media screen and (min-width:1601px){
-    .album-grid{
-        width:16.6666666%;
-        height:100%;
-    }
     .album-tit-bd{
-        font-size:1.4em;
-        padding:0.2em 0.3em;
+        font-size:1.8em;
     }
     .album-desc{
         font-size:1.2em;
     }
 }
 @media screen and (max-width: 660px) {
+    .demo-1 .sl-slide blockquote {
+        font-size:14px;
+    }
     .demo-1 .deco {
         width: 150px;
         height: 150px;

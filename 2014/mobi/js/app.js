@@ -3,7 +3,8 @@ $(function() {
 
     var Page = (function() {
 
-        var $navArrows = $( '#nav-arrows' ),
+        var isPopState = false, 
+            $navArrows = $( '#nav-arrows' ),
             $nav = $( '#nav-dots > span' ),
             slitslider = $( '#slider' ).slitslider( {
                 onBeforeChange : function( slide, pos ) {
@@ -11,6 +12,14 @@ $(function() {
                     $nav.removeClass( 'nav-dot-current' );
                     $nav.eq( pos ).addClass( 'nav-dot-current' );
 
+                },
+                onAfterChange : function($slide,pos){
+                    if(isPopState){
+                        isPopState = false;
+                        return false;
+                    }
+                    setHistory(pos+1);
+                    return false;
                 }
             } ),
 
@@ -19,6 +28,9 @@ $(function() {
                 initEvents();
                 initGesture();
                 initAlbum();
+
+                initHistory();
+
             },
             initEvents = function() {
 
@@ -58,6 +70,35 @@ $(function() {
                 } );
 
             },
+            initHistory = function(){
+                if(!supportHistoryApi()) return;
+
+                // Revert to a previously saved state
+                window.addEventListener('popstate', function(evt) {
+                    if( !evt.state || ( evt.state.idx== (slitslider.current+1) ) ) return false;
+                    isPopState = true;
+                    slitslider.jump(evt.state.idx);
+                });
+
+                var hash = location.hash,
+                    hash = hash.length>0 && hash.replace('#p','');
+
+                try{
+                    hash = parseInt(hash);
+                }catch(e){
+                    hash = 1;
+                }
+
+                // Store the initial content so we can revisit it later
+                history.replaceState({
+                    idx: hash
+                }, document.title, document.location.href);
+
+                if(hash>1){
+                    isPopState = true;
+                    slitslider.jump(hash);
+                }
+            },
             initGesture = function(){
                 slitslider.$el.hammer({
                     
@@ -75,6 +116,21 @@ $(function() {
                         slitslider.jump(idxCache[this.id]);
                     });
                 });
+            },
+            supportHistoryApi = function(){
+                if(window['history'] && history.pushState){
+                    return true;
+                }
+                return false;
+            },
+            setHistory = function(idx){
+                if(!supportHistoryApi()) return;
+
+                var hash = '#p'+idx,
+                    href = location.href.replace(location.hash,hash);
+                // Add an item to the history log
+                history.pushState({idx:idx}, document.title/*title*/,href);
+                
             };
 
             return { init : init };
