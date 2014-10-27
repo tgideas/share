@@ -172,12 +172,13 @@
 .album-grid:after {
     clear: both;
 }
-.album-grid:nth-child(1){
+.album-grid:nth-child(odd){
     background:#fff;
 }
-.album-grid:nth-child(2){
-    background:#000;
+.album-grid:nth-child(even){
+    background:#333;
 }
+/*
 .album-grid:nth-child(3){
     background:#db84ad;
 }
@@ -190,6 +191,7 @@
 .album-grid:nth-child(6){
     background:#7aad20;
 }
+*/
 .album-grid-bd{
     position:relative;
     width:100%;
@@ -204,8 +206,9 @@
 }
 .album-tit{
     position:absolute;
-    right:10px;
-    bottom:10px;
+    right:5px;
+    bottom:0;
+    height:100%;
 }
 .album-tit-bd{
     color:#fff;
@@ -217,7 +220,6 @@
 }
 .album-tit-bd em{
     font-style:normal;
-    font-weight:700;
     color:red;
 }
 .bg-light .album-tit-bd{
