@@ -113,7 +113,6 @@ $(function() {
                 $('#album').find('.album-grid').each(function(i,o){
                     idxCache[(o.id = 'albumGrid'+i)]=i+3;
                     $(o).on('click',function(ev){
-                        alert(this.id);
                         slitslider.jump(idxCache[this.id]);
                     });
                 });
