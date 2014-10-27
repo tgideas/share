@@ -1,4 +1,4 @@
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 $(function() {
 
     var Page = (function() {
