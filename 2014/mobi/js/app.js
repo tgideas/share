@@ -1,4 +1,5 @@
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+alert(navigator.userAgent);
 $(function() {
 
     var Page = (function() {

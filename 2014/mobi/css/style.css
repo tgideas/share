@@ -297,6 +297,24 @@
     border-radius: 50%;
 }
 
+.demo-1 [data-ficon]:after {
+    content: attr(data-ficon);
+    font-family:'fontello';
+    color: #999;
+    text-shadow: 0 0 1px #999;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    line-height: 220px;
+    text-align: center;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -110px;
+    box-shadow: inset 0 0 0 10px #f7f7f7;
+    border-radius: 50%;
+}
+
 .demo-1 .sl-slide h2 {
     color: #000;
     text-shadow: 0 0 1px #000;
@@ -709,7 +727,7 @@
         margin:-55px 0 0 -55px;
     }
 
-    .demo-1 [data-icon]:after {
+    .demo-1 [data-icon]:after,.demo-1 [data-ficon]:after{
         width: 130px;
         height: 130px;
         line-height: 130px;
