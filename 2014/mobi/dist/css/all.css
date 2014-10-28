@@ -461,7 +461,7 @@ a {
     line-height: 260px;
     text-align: center;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 2.1em;
     font-weight: normal;
     color: #fff;
     text-shadow: 0px 0px 2px #666;
@@ -916,7 +916,7 @@ a {
         line-height:150px;
         margin-left: -75px;
         margin-bottom: 50px;
-        font-size:14px;
+        font-size:1.4em;
     }
 
     .demo-1 .deco img{
